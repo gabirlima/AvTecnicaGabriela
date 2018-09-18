@@ -34,7 +34,7 @@ namespace AvTecnicaGabriela.JSONModels
 
     public partial class PostModelList
     {
-        public static PostModelList[] FromJson(string json) => JsonConvert.DeserializeObject<PostModelList[]>(json, Converter.Settings);
+        public static List<PostModel> FromJson(string json) => JsonConvert.DeserializeObject<List<PostModel>>(json, Converter.Settings);
     }
 
     public static class Serialize

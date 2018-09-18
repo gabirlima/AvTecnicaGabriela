@@ -1,6 +1,7 @@
 ﻿using AvTecnicaGabriela.Endpoints;
 using NUnit.Framework;
 using System;
+using System.Net;
 using TechTalk.SpecFlow;
 
 namespace AvTecnicaGabriela.Steps
@@ -75,7 +76,22 @@ namespace AvTecnicaGabriela.Steps
         [Then(@"returned (.*) request status")]
         public void ThenReturnedRequestStatus(int status)
         {
-            Assert.AreEqual(post.CheckResponseStatus(), status);
+            switch(status)
+            {
+                case 200:
+                    Assert.AreEqual(HttpStatusCode.OK, post.CheckResponseStatus());
+                    break;
+                case 404:
+                    Assert.AreEqual(HttpStatusCode.NotFound, post.CheckResponseStatus());
+                    break;
+                case 201:
+                    Assert.AreEqual(HttpStatusCode.Created, post.CheckResponseStatus());
+                    break;
+                default:
+                    Assert.Inconclusive("Status informado não foi mapeado.");
+                    break;
+            }
+            
         }
         
         [Then(@"I can search the post that I registered")]

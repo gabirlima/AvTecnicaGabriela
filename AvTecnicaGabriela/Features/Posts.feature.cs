@@ -169,7 +169,7 @@ this.FeatureBackground();
 #line 38
  testRunner.When("I send a request to register a post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
- testRunner.Then("returned 200 request status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("returned 201 request status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
   testRunner.And("I can search the post that I registered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

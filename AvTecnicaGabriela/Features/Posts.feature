@@ -36,7 +36,7 @@ Scenario Outline: Search posts by user ID
 
 Scenario: Register post
 	When I send a request to register a post
-	Then returned 200 request status
+	Then returned 201 request status
 		And I can search the post that I registered
 
 Scenario: Update post

@@ -111,10 +111,9 @@ namespace AvTecnicaGabriela.Endpoints
             return response.Content.Count() != 0;
         }
 
-        public int CheckResponseStatus()
+        public HttpStatusCode CheckResponseStatus()
         {
-            int statusCode = Int32.Parse(response.StatusCode.ToString());
-            return statusCode;
+            return response.StatusCode;
         } 
 
         public Boolean CheckUpdatedPost(int postId)
