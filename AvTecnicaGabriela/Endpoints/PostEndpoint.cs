@@ -1,4 +1,6 @@
 ﻿using AvTecnicaGabriela.JSONModels;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using RestSharp;
 using System;
@@ -47,7 +49,8 @@ namespace AvTecnicaGabriela.Endpoints
             request = new RestRequest(Method.GET);
 
             response = client.Execute(request);
-            var postModel = PostModel.FromJson(response.Content);
+
+            var searchResult = PostModelList.FromJson(response.Content);
         }
 
         public void SearchPosts(int id, string filter)

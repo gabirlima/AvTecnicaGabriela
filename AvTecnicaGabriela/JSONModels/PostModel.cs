@@ -22,9 +22,19 @@ namespace AvTecnicaGabriela.JSONModels
         public string Body { get; set; }
     }
 
+    public partial class PostModelList
+    {
+        public PostModel[] PostModels { get; set; }
+    }
+
     public partial class PostModel
     {
         public static PostModel FromJson(string json) => JsonConvert.DeserializeObject<PostModel>(json, Converter.Settings);
+    }
+
+    public partial class PostModelList
+    {
+        public static PostModelList[] FromJson(string json) => JsonConvert.DeserializeObject<PostModelList[]>(json, Converter.Settings);
     }
 
     public static class Serialize
