@@ -37,17 +37,13 @@ Scenario Outline: Search posts by user ID
 Scenario: Register post
 	When I send a request to register a post
 	Then returned 201 request status
-		And I can search the post that I registered
 
 Scenario: Update post
-	Given I registered a post
-	When I send a request to update the post
+	When I send a request to update post with id 10
 	Then returned 200 request status
-		And the post was updated
 
 Scenario: Delete post
-	Given I registered a post
-	When I send a request to delete the post
+	When I send a request to delete post with id 5
 	Then returned 200 request status
 		And the post was deleted
 

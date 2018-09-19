@@ -43,14 +43,14 @@ namespace AvTecnicaGabriela.Steps
             post.SearchPosts(id, "userid");
         }
         
-        [When(@"I send a request to update the post")]
-        public void WhenISendARequestToUpdateThePost()
+        [When(@"I send a request to update post with id (.*)")]
+        public void WhenISendARequestToUpdateThePost(int postId)
         {
             post.UpdatePost(postId);
         }
         
-        [When(@"I send a request to delete the post")]
-        public void WhenISendARequestToDeleteThePost()
+        [When(@"I send a request to delete post with id (.*)")]
+        public void WhenISendARequestToDeleteThePost(int postId)
         {
             post.DeletePost(postId);
         }
@@ -92,12 +92,6 @@ namespace AvTecnicaGabriela.Steps
                     break;
             }
             
-        }
-        
-        [Then(@"I can search the post that I registered")]
-        public void ThenICanSearchThePostThatIRegistered()
-        {
-            Assert.IsTrue(post.SearchPosts(postId));
         }
         
         [Then(@"the post was updated")]

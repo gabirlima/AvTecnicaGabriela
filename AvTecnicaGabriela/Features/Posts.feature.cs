@@ -170,8 +170,6 @@ this.FeatureBackground();
  testRunner.When("I send a request to register a post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
  testRunner.Then("returned 201 request status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
-  testRunner.And("I can search the post that I registered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -181,19 +179,15 @@ this.FeatureBackground();
         public virtual void UpdatePost()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update post", null, ((string[])(null)));
-#line 42
+#line 41
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
+#line 42
+ testRunner.When("I send a request to update post with id 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 43
- testRunner.Given("I registered a post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 44
- testRunner.When("I send a request to update the post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
  testRunner.Then("returned 200 request status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 46
-  testRunner.And("the post was updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -203,18 +197,16 @@ this.FeatureBackground();
         public virtual void DeletePost()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete post", null, ((string[])(null)));
-#line 48
+#line 45
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 49
- testRunner.Given("I registered a post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 50
- testRunner.When("I send a request to delete the post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 46
+ testRunner.When("I send a request to delete post with id 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 47
  testRunner.Then("returned 200 request status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 52
+#line 48
   testRunner.And("the post was deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -225,14 +217,14 @@ this.FeatureBackground();
         public virtual void TryUpdatePostThatDoesNotExist()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Try update post that does not exist", null, ((string[])(null)));
-#line 54
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 55
+#line 51
  testRunner.When("I send a request to update post with invalid id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 52
  testRunner.Then("returned 404 request status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -243,14 +235,14 @@ this.FeatureBackground();
         public virtual void TryDeletePostThatDoesNotExist()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Try delete post that does not exist", null, ((string[])(null)));
-#line 58
+#line 54
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 59
+#line 55
  testRunner.When("I send a request to delete post with invalid id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
+#line 56
  testRunner.Then("returned 404 request status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

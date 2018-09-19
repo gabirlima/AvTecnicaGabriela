@@ -74,7 +74,6 @@ namespace AvTecnicaGabriela.Endpoints
             request = new RestRequest(Method.GET);
 
             response = client.Execute(request);
-            var postModel = PostModel.FromJson(response.Content);
         }
 
         public Boolean SearchPosts(int id)
@@ -93,7 +92,7 @@ namespace AvTecnicaGabriela.Endpoints
             request = new RestRequest(Method.PATCH);
 
             request.AddHeader("Content-type", "application/json; charset=UTF-8");
-            request.AddParameter("title", "alterando título do post", ParameterType.RequestBody);
+            request.AddBody("title", "alterando título do post");
 
             response = client.Execute(request);
         }

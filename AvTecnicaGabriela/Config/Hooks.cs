@@ -22,7 +22,7 @@ namespace AvTecnicaGabriela.Config
         [BeforeTestRun]
         public static void InitializeReport()
         {
-            var htmlReporter = new ExtentHtmlReporter(@"C:\Users\Gabi\Source\Repos\AvTecnicaGabriela2\AvTecnicaGabriela\Report.html");
+            var htmlReporter = new ExtentHtmlReporter(@"C:\Users\gabriela.lima\source\repos\AvTecnicaGabriela\TestResults\Report.html");
             htmlReporter.Configuration().Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             
             extent = new ExtentReports();
