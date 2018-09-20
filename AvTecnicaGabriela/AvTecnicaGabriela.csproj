@@ -106,6 +106,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="data.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Features\Posts.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Posts.feature.cs</LastGenOutput>
@@ -116,6 +119,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="extent-config.xml" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

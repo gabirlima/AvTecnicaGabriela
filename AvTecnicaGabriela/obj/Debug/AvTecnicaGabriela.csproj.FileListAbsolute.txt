@@ -268,3 +268,4 @@ C:\Users\gabriela.lima\source\repos\AvTecnicaGabriela\AvTecnicaGabriela\bin\Debu
 C:\Users\gabriela.lima\source\repos\AvTecnicaGabriela\AvTecnicaGabriela\bin\Debug\RestSharp.xml
 C:\Users\gabriela.lima\source\repos\AvTecnicaGabriela\AvTecnicaGabriela\bin\Debug\System.Buffers.xml
 C:\Users\gabriela.lima\source\repos\AvTecnicaGabriela\AvTecnicaGabriela\bin\Debug\System.Web.Razor.xml
+C:\Users\Gabi\source\repos\AvTecnicaGabriela2\AvTecnicaGabriela\bin\Debug\data.xlsx

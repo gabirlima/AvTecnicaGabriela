@@ -12,45 +12,47 @@ Scenario: Search all posts
 
 Scenario Outline: Search posts by ID
 	When I send a request to search post with id <id>
-	Then returned JSON objects is not null
+	Then returned <status> request status
 
 	Examples: 
-	| id |
-	| 1  |
-	| 10 |
-	| 17 |
-
-Scenario: Try search posts by invalid ID
-	When I send a request to search post with id "0"
-	Then returned 404 request status
+	| id | status |
+	| 1  | 200    |
+	| 10 | 200    |
+	| 17 | 200    |
+	| 0  | 404    |
 
 Scenario Outline: Search posts by user ID
 	When I send a request to search post with user id <userid>
-	Then returned JSON objects is not null
+	Then returned <status> request status
 
 	Examples: 
-	| userid |
-	| 2		 |
-	| 5		 |
-	| 7		 |
+	| userid | status |
+	| 2      | 200    |
+	| 5      | 200    |
+	| 7      | 200    |
+	| 0      | 404    |
 
 Scenario: Register post
 	When I send a request to register a post
 	Then returned 201 request status
 
-Scenario: Update post
-	When I send a request to update post with id 10
-	Then returned 200 request status
+Scenario Outline: Update post
+	When I send a request to update post with id <id>
+	Then returned <status> request status
 
-Scenario: Delete post
-	When I send a request to delete post with id 5
-	Then returned 200 request status
+	Examples: 
+	| id | status |
+	| 10 | 200    |
+	| 0  | 404    |
+
+Scenario Outline: Delete post
+	When I send a request to delete post with id <id>
+	Then returned <status> request status
 		And the post was deleted
 
-Scenario: Try update post that does not exist
-	When I send a request to update post with invalid id
-	Then returned 404 request status
+	Examples: 
+	| id | status |
+	| 5  | 200    |
+	| 0  | 404    |
 
-Scenario: Try delete post that does not exist
-	When I send a request to delete post with invalid id
-	Then returned 404 request status
+
